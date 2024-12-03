@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Example</title>
+    <style>
+        .box-visible {
+            width: 300px;
+            height: 150px;
+            border: 1px solid black;
+            overflow: visible;  /* Content will overflow, no scrollbars */
+        }
+
+        .box-hidden {
+            width: 300px;
+            height: 150px;
+            border: 1px solid black;
+            overflow: hidden;  /* Content will be clipped, no scrollbars */
+        }
+
+        .box-scroll {
+            width: 300px;
+            height: 150px;
+            border: 1px solid black;
+            overflow: scroll;  /* Scrollbars will always appear */
+        }
+
+        .box-auto {
+            width: 300px;
+            height: 150px;
+            border: 1px solid black;
+            overflow: auto;  /* Scrollbars will appear if content overflows */
+        }
+
+        .box-horizontal {
+            width: 300px;
+            height: 150px;
+            border: 1px solid black;
+            overflow-x: auto;  /* Horizontal scrollbar appears if needed */
+            overflow-y: hidden; /* No vertical scrollbar */
+        }
+
+        .box-vertical {
+            width: 300px;
+            height: 150px;
+            border: 1px solid black;
+            overflow-x: hidden; /* No horizontal scrollbar */
+            overflow-y: auto;   /* Vertical scrollbar appears if needed */
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Overflow Property Demonstration</h1>
+
+    <h2>Overflow: visible;</h2>
+    <div class="box-visible">
+        <p>This box uses `overflow: visible;` The content will overflow and be visible outside the box.</p>
+    </div>
+
+    <h2>Overflow: hidden;</h2>
+    <div class="box-hidden">
+        <p>This box uses `overflow: hidden;` The content will be clipped and not visible outside the box.</p>
+        <p>More content that won't be visible.</p>
+    </div>
+
+    <h2>Overflow: scroll;</h2>
+    <div class="box-scroll">
+        <p>This box uses `overflow: scroll;` Scrollbars are always visible, even if the content doesn't overflow.</p>
+        <p>Keep adding more text to see the scrollbars in action.</p>
+        <p>More content to show how scrollbars appear.</p>
+    </div>
+
+    <h2>Overflow: auto;</h2>
+    <div class="box-auto">
+        <p>This box uses `overflow: auto;` Scrollbars will appear only if the content overflows.</p>
+        <p>Keep adding more text to trigger the scrollbars.</p>
+        <p>This is enough content to show how it behaves.</p>
+    </div>
+
+    <h2>Overflow-X: auto (Horizontal scrollbar only)</h2>
+    <div class="box-horizontal">
+        <p>This box uses `overflow-x: auto;` Scrollbars will appear only if the content overflows horizontally.</p>
+        <p>Keep adding more content horizontally to trigger horizontal scrolling.</p>
+    </div>
+
+    <h2>Overflow-Y: auto (Vertical scrollbar only)</h2>
+    <div class="box-vertical">
+        <p>This box uses `overflow-y: auto;` Scrollbars will appear only if the content overflows vertically.</p>
+        <p>Keep adding more text to trigger vertical scrolling.</p>
+        <p>This is enough text to show how the vertical scrollbar works.</p>
+    </div>
+
+</body>
+</html>
